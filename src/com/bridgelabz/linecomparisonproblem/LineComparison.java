@@ -26,6 +26,24 @@ public class LineComparison {
         double lengthofLine = Math.sqrt(Math.pow((x2-x1),2)+Math.pow((y2-y1),2));
         return lengthofLine;
     }
+    public static String compareTo(double l1,double l2)
+    {
+        if(l1==l2)
+        {
+            return "Line1 and Line2 are Equal.";
+        }
+        else
+        {
+            if(l1>l2)
+            {
+                return "Line 1 is Bigger Than Line 2";
+            }
+            else
+            {
+                return "Line 1 is Smaller Than Line 2";
+            }
+        }
+    }
 
     public static void main(String[] args) {
         System.out.println("Welcome to Line Comparison Computation Program");
@@ -41,12 +59,8 @@ public class LineComparison {
         System.out.println("Length of Line1 : "+line1Length);
         System.out.println("Length of Line2 : "+line2Length);
 
-        if(line1Length == line2Length) {
-            System.out.println("Length of Line1 and Line2 are Equal");
-        } else {
-            System.out.println("Length of Line1 and Line2 are Not Equal");
-        }
-
+        //Checking the Equality or Smaller Length of Lines
+        System.out.println(compareTo(line1Length,line2Length));
 
     }
 }
